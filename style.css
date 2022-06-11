@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  background: #333;
+  width: 100vw;
+  height: 100vh;
+  color: #f1f1f1;
+  font-family: 'Nunito';
+  /* overflow: hidden; */
+}
+
+.espaceConnexion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60rem;
+  height: 50rem;
+  border-radius: 5rem;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'Inter';
+  display: flex;
+  justify-content: space-between;
+  /* transform: scale(0.01 , 0.01);
+  position: absolute;
+  top: 71.5vh;
+  left: 83vw;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out; */
+}
+
+.espaceConnexion h4 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 10rem;
+}
+
+/* .espaceConnexion .flexFormConnexion, .flexFormRegister {
+  width: 50%;
+  height: 100%;
+ 
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+} */
+
+.espaceConnexion .flexFormConnexion {
+  width: 50%;
+  height: 100%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+
+/* .espaceConnexion .flexFormConnexion, .flexFormRegister input {
+  outline: none;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  margin-bottom: 1.5rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  padding-left: 3.5rem;
+  padding-right: 1.5rem;
+  border-radius: 10rem;
+} */
+
+.espaceConnexion .flexFormConnexion input {
+  outline: none;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  margin-bottom: 1.5rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  padding-left: 3.5rem;
+  padding-right: 1.5rem;
+  border-radius: 10rem;
+}
+
+/* .espaceConnexion .flexFormConnexion, .flexFormRegister button {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background: black;
+  height: 4rem;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  border-radius: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.07rem;
+  cursor: pointer;
+} */
+
+.espaceConnexion .flexFormConnexion button {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background: black;
+  height: 4rem;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  border-radius: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.07rem;
+  cursor: pointer;
+}
+
+.espaceConnexion .flexFormConnexion .fgt {
+  /* border: 1px solid black; */
+  display: flex;
+  height: 15%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  text-transform: none;
+  color: black;
+}
+
+.espaceConnexion .flexFormConnexion,
+.flexFormRegister img {
+  width: 1.5rem;
+  position: relative;
+  top: 2.5rem;
+  left: 1rem;
+}
+
+.espaceConnexion .flexFormConnexion,
+.flexFormRegister img:nth-child(4) {
+  width: 1.6rem;
+}
+
+.espaceConnexion .flexFormConnexion .fgt > * {
+  cursor: pointer;
+}
+
+.espaceConnexion .flexFormConnexion .fgt > *:hover {
+  text-decoration: underline;
+}
+
+.espaceConnexion figure {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.espaceConnexion figure img {
+  width: 18rem;
+  margin-left: 4rem;
+}
+
+.showLogSpace {
+  height: 3rem;
+  width: 3rem;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+  position: absolute;
+  top: 96vh;
+  left: 98vw;
+  border-radius: 10rem;
+}
+
+#showLogSpace {
+  display: none;
+}
+
+#showLogSpace:checked ~ .espaceConnexion {
+  visibility: visible;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60rem;
+  height: 50rem;
+}
+
+.espaceConnexion.changeTO {
+  animation: flip-scale-up-ver 1s forwards ease-in-out;
+}
+
+.espaceConnexion.changeTO .flexFormConnexion {
+  display: none;
+}
+
+.espaceConnexion.changeTO figure {
+  transition: all 1s ease-in-out;
+  transform: rotate(360deg);
+}
+
+@keyframes flip-scale-up-ver {
+  0% {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1) rotateY(0);
+  }
+  100% {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1) rotateY(180deg);
+  }
+}
+
+/* ---------------------------------------------RegisterSide------------------------------------------------ */
+
+.flexFormRegister {
+  display: none;
+}
+
+.btnRegister {
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  border: none;
+  padding: 1.2rem 2.4rem;
+  border-radius: 10rem;
+  color: white;
+  background: black;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+input[type='date'] {
+  padding-left: 1.5rem;
+  font-family: 'Nunito';
+  letter-spacing: 0.2rem;
+  font-weight: 100;
+  color: #333;
+}
+
+.flexFormRegister h4 {
+  padding-top: 5rem;
+}
+
+.flexFormRegister input:not(input[type='text']) {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.names--register {
+  display: flex;
+  justify-content: space-between;
+}
+.names--register > * {
+  width: 48%;
+}
+
+.names--register input:nth-child(1) {
+  padding-left: 1.5rem;
+}
+
+.names--register input:nth-child(2) {
+  padding-left: 1.5rem;
+}
+
+.agree {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 1rem;
+}
+.agree p {
+  padding-top: 1rem;
+  width: 80%;
+  text-transform: none;
+}
+input[type='checkbox'] {
+  outline: none;
+}
+
+/* input[type=checkbox]:checked{
+  background: red;
+} */
