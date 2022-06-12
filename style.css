@@ -15,7 +15,7 @@ html {
   height: 100vh;
   color: #f1f1f1;
   font-family: 'Nunito';
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .espaceConnexion {
@@ -34,12 +34,13 @@ html {
   font-family: 'Inter';
   display: flex;
   justify-content: space-between;
-  /* transform: scale(0.01 , 0.01);
+  /* ------------------------------------------------ */
+  transform: scale(0.01 , 0.01);
   position: absolute;
   top: 71.5vh;
   left: 83vw;
   visibility: hidden;
-  transition: all 0.2s ease-in-out; */
+  transition: all 0.2s ease-in-out;
 }
 
 .espaceConnexion h4 {
@@ -49,14 +50,9 @@ html {
   padding-top: 10rem;
 }
 
-/* .espaceConnexion .flexFormConnexion, .flexFormRegister {
-  width: 50%;
-  height: 100%;
- 
-  color: black;
-  display: flex;
-  flex-direction: column;
-  margin-right: 1rem;
+/* .espaceConnexion.changeTO.Back .flexFormConnexion{
+  display: inline-block;
+  transform: rotateY(180deg);
 } */
 
 .espaceConnexion .flexFormConnexion {
@@ -67,18 +63,6 @@ html {
   flex-direction: column;
   margin-right: 1rem;
 }
-
-/* .espaceConnexion .flexFormConnexion, .flexFormRegister input {
-  outline: none;
-  background: rgba(255, 255, 255, 0.4);
-  border: none;
-  margin-bottom: 1.5rem;
-  height: 4rem;
-  font-size: 1.5rem;
-  padding-left: 3.5rem;
-  padding-right: 1.5rem;
-  border-radius: 10rem;
-} */
 
 .espaceConnexion .flexFormConnexion input {
   outline: none;
@@ -91,21 +75,6 @@ html {
   padding-right: 1.5rem;
   border-radius: 10rem;
 }
-
-/* .espaceConnexion .flexFormConnexion, .flexFormRegister button {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: white;
-  background: black;
-  height: 4rem;
-  font-size: 1.2rem;
-  padding-left: 1rem;
-  border-radius: 10rem;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  letter-spacing: 0.07rem;
-  cursor: pointer;
-} */
 
 .espaceConnexion .flexFormConnexion button {
   text-transform: uppercase;
@@ -134,16 +103,14 @@ html {
   color: black;
 }
 
-.espaceConnexion .flexFormConnexion,
-.flexFormRegister img {
+.espaceConnexion .flexFormConnexion img {
   width: 1.5rem;
   position: relative;
   top: 2.5rem;
   left: 1rem;
 }
 
-.espaceConnexion .flexFormConnexion,
-.flexFormRegister img:nth-child(4) {
+.espaceConnexion .flexFormConnexion img:nth-child(4) {
   width: 1.6rem;
 }
 
@@ -222,9 +189,67 @@ html {
 
 /* ---------------------------------------------RegisterSide------------------------------------------------ */
 
-.flexFormRegister {
+/* .espaceConnexion.changeTO.Back{
+  animation: flip-scale-down-ver 1s forwards ease-in-out;
+} */
+
+.espaceConnexion.Back{
+  animation: flip-scale-down-ver 1s forwards ease-in-out;
+}
+
+.espaceConnexion.espaceConnexion.Back figure {
+  transition: all 0.2s ease-in-out;
+  transform: rotate(180deg) translate(-100%);
+}
+
+@keyframes flip-scale-down-ver {
+  0% {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1) rotateY(0);
+  }
+  100% {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1) rotateY(180deg);
+  }
+}
+
+/* .espaceConnexion.changeTO.Back .flexFormRegister{
+  display: none;
+} */
+
+.espaceConnexion.Back .flexFormRegister{
   display: none;
 }
+
+.espaceConnexion.changeTO .flexFormRegister {
+  display: inline-block;
+  transform: rotateY(180deg); 
+}
+
+.espaceConnexion.changeTO .flexFormRegister input:not(.name){
+  width: 100%;
+  /* padding-left: 1rem; */
+}
+
+.espaceConnexion.changeTO .flexFormRegister img{
+  position: relative;
+  top: 3rem;
+  left: 1rem;
+}
+
+.espaceConnexion.changeTO .flexFormRegister .agree p{
+text-align: center;
+}
+
+.espaceConnexion.changeTO .flexFormRegister button{
+width: 80%;
+margin-left: 3rem;
+}
+
 
 .btnRegister {
   position: absolute;
@@ -241,6 +266,7 @@ html {
 
 input[type='date'] {
   padding-left: 1.5rem;
+  width: 82%;
   font-family: 'Nunito';
   letter-spacing: 0.2rem;
   font-weight: 100;
@@ -248,7 +274,7 @@ input[type='date'] {
 }
 
 .flexFormRegister h4 {
-  padding-top: 5rem;
+  padding-top: 4rem;
 }
 
 .flexFormRegister input:not(input[type='text']) {
@@ -290,3 +316,65 @@ input[type='checkbox'] {
 /* input[type=checkbox]:checked{
   background: red;
 } */
+
+.espaceConnexion .flexFormRegister {
+  width: 50%;
+  height: 100%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+  display: none;
+}
+
+
+.espaceConnexion .flexFormRegister input {
+  outline: none;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  margin-bottom: 1.5rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  padding-left: 3.5rem;
+  padding-right: 1.5rem;
+  border-radius: 10rem;
+}
+
+
+.espaceConnexion .flexFormRegister button {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background: black;
+  height: 4rem;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  border-radius: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.07rem;
+  cursor: pointer;
+}
+
+.espaceConnexion .flexFormRegister img {
+  width: 1.5rem;
+}
+
+.espaceConnexion .flexFormRegister img:nth-child(4) {
+  width: 1.6rem;
+}
+
+
+/* ------------------------------------------------BACK------------------------------------------------ */
+
+.espaceConnexion.Back .flexFormConnexion{
+  transform: rotateY(180deg) translateX(90%);
+}
+
+/* .espaceConnexion.Back figure img{
+  transform: rotateY(180deg) translateX(-200%);
+} */
+
+.espaceConnexion.Back .btnRegister{
+  transform: translateX(-200%);
+}
